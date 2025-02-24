@@ -10,11 +10,11 @@ function authMiddleware(req, res, next) {
 
 
     if (user && user.name === process.env.X_USER_AUTH && user.pass === process.env.X_USER_PASSWORD) {
-        if (!contentType || !contentType.includes("application/x-www-form-urlencoded")) {
-            return res.status(401).json({ message: "Unauthorized: ContentType Not Allowed" });
-        } else {
-            next(); // Lanjut ke handler berikutnya jika auth sukses
-        }
+        // if (!contentType || !contentType.includes("application/json")) {
+        //     return res.status(401).json({ message: "Unauthorized: ContentType Not Allowed" });
+        // } else {
+        next(); // Lanjut ke handler berikutnya jika auth sukses
+        // }
 
     } else {
         return res.status(401).json({ success: false, message: 'Invalid Unauthorized!' });
