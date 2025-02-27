@@ -6,7 +6,7 @@ This is a WhatsApp bot built with nodejs  Express that connects through the What
 ## Features
 
 - Suport multiple akun
-- Send text messages single or multiple  simultaneously via API.
+- Send text messages single or multiple simultaneously via API.
 - Send file messages with or without captions simultaneously via API.
 - Delete akun by Account ID or number your register
 
@@ -42,11 +42,12 @@ You can only access with `Authorization` - `BASIC_AUTH`, you can set username da
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
+| `accountId` | `string` | **Parameter**. *The id account you use or register*|
 | `numbers` | `string` | **Required**. *Single or Multiples ID, separate with comma without space. Example: 6281152xxxxxx,6281266xxxxxx,*|
-| `message` | `string` | **Required/Opsional**. *if you send file or image (.jpg,.jpeg,.png) you can skip this, if not This is mandatory|
-| `attachment` | `string` | **Opsional**. *Example:*`D:/test.jpg` |
+| `message` | `string` | **Required/Opsional**. *if you send file or image (.jpg,.jpeg,.png) you can skip this, if not This is mandatory*|
+| `attachment` | `string` | **Opsional**. *Example:*`D:/example.jpg` |
 | `caption` | `string` | *Opsional*.  |
-| `Content-Type` | `application/json` | 
+| `Content-Type` | `form-data`  or `application/json` |
 
 
 #### Send File
