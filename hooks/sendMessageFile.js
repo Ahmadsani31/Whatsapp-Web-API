@@ -1,6 +1,10 @@
+const { MessageMedia } = require("whatsapp-web.js");
 const logMessage = require("../ultis/logger");
+const path = require('path');
 
-async function sendMessageFile(client, caption, attachmentFiles, id) {
+async function sendMessageFile(client, caption, attachmentFiles, id, groupName) {
+
+    const extension = [".jpg", ".jpeg", ".png"];
 
     const ext = path.extname(attachmentFiles.originalname).toLowerCase();
 
@@ -14,31 +18,28 @@ async function sendMessageFile(client, caption, attachmentFiles, id) {
             mimetype = "image/jpeg";
         } else if (ext === ".png") {
             mimetype = "image/png";
+        } else if (ext === ".gif") {
+            mimetype = "image/gif";
         }
     }
 
-
-
-    const mediaFile = new MessageMedia(
-        attachmentFiles.mimetype,
-        attachmentFiles.buffer.toString("base64"),
-        attachmentFiles.originalname);
-
+    if (!extension.includes(ext)) {
+        logMessage(`File image type not supported, to user ${groupName} please send image with type .jpg, .jpeg, .png`);
+    }
 
     try {
-        let chat = await client.getChatById(id);
-        let groupName = chat.name;
-        await client.sendMessage(id, mediaFile, {
+        const mediaFile = new MessageMedia(
+            attachmentFiles.mimetype,
+            attachmentFiles.buffer.toString("base64"),
+            attachmentFiles.originalname);
+
+        let sentMessage = await client.sendMessage(id, mediaFile, {
             caption,
         });
-        let sentMessage = await client.sendMessage(id, message);
-        console.log(sentMessage.body);
-
+        console.log(sentMessage.id._serialized);
         logMessage(
-            `Report berhasil dikirim ke ${groupName} dengan ID pesan: ${sentMessage.body}`
+            `Report berhasil dikirim ke ${groupName} dengan ID pesan: ${sentMessage.id._serialized}`
         );
-
-        return groupName;
     } catch (error) {
         logMessage(`Error sending message: ${error}`);
     }

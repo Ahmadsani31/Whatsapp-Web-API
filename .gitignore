@@ -1,8 +1,7 @@
 node_modules/
 .wwebjs_auth/
+sessions_auth/
 logs/status.log
 .env
-whatsapp-bot-data/
 .wwebjs_cache/
-google-service-account.json
-getSchedule.py
+
