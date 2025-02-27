@@ -24,17 +24,21 @@ app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
 
-const SESSIONS_DIR = path.join(__dirname, "sessions_auth");
+const CREATE_DIR = ["sessions_auth", "logs"];
 
-if (!fs.existsSync(SESSIONS_DIR)) {
-  fs.mkdirSync(SESSIONS_DIR);
+for (const dir of CREATE_DIR) {
+  if (!fs.existsSync(path.join(__dirname, dir))) {
+    fs.mkdirSync(path.join(__dirname, dir));
+  }
 }
 
 const clients = new Map();
 
-console.log(clients);
-
 app.post("/init-app", authMiddleware, (req, res) => {
+
+  console.log("get/init-app");
+
+
   const { accountId } = req.body;
 
   if (!accountId) {
@@ -52,7 +56,7 @@ app.post("/init-app", authMiddleware, (req, res) => {
   const client = new Client({
     authStrategy: new LocalAuth({
       clientId: accountId,
-      dataPath: SESSIONS_DIR,
+      dataPath: CREATE_DIR[0],
     }),
     puppeteer: {
       headless: true,
@@ -69,23 +73,34 @@ app.post("/init-app", authMiddleware, (req, res) => {
     qrcode.generate(qr, { small: true });
   });
 
-  client.on("ready", () => {
-    console.log(`Client ${accountId} is ready!`);
-    // console.log(clients);
+  client.on("loading_screen", (percent, message) => {
+    console.log(`Loading ${percent}% : ${message}`);
+    logMessage(`Loading ${percent}% : ${message}`);
+  });
 
-    res
-      .status(200)
-      .json({ success: true, message: "Client initialized and ready" });
+  client.on("auth_failure", () => {
+    console.log(`Auth failure for ${accountId}`);
+    logMessage(`Auth failure for ${accountId}`);
   });
 
   client.on("authenticated", () => {
     // saveSession(client, session);
-    console.log(`Client ${accountId} authenticated!`);
+
+    console.log(`Client ${accountId} AUTHENTICATED!`);
+    logMessage(`Client ${accountId} authenticated!`);
+
   });
 
   client.on("disconnected", () => {
     console.log(`Client ${accountId} disconnected`);
     clients.delete(accountId);
+  });
+
+  client.on("ready", () => {
+    console.log(`Client ${accountId} is READY!`);
+    // console.log(clients);
+    logMessage(`Client ${accountId} is ready!`);
+
   });
 
   client.initialize();
@@ -108,6 +123,7 @@ app.post(
     const accountId = req.params.accountId;
 
     if (!accountId) {
+      logMessage("Account ID is required");
       return res
         .status(400)
         .json({ success: false, message: "Account ID is required" });
@@ -115,11 +131,12 @@ app.post(
     const { numbers, message, caption } = req.body;
     const attachmentFiles = req.file;
 
-    console.log("attachmentFiles", attachmentFiles);
+    // console.log("attachmentFiles", attachmentFiles);
     console.log("body ", JSON.stringify(req.body));
 
     const client = clients.get(accountId);
     if (!client) {
+      logMessage("Client not initialized");
       return res
         .status(401)
         .json({ success: false, message: "Client not initialized" });
@@ -133,12 +150,11 @@ app.post(
 
       if (attachmentFiles) {
         if (!numbers || attachmentFiles.length > 0) {
-          return res
-            .status(400)
-            .json({
-              success: false,
-              message: "Numbers and attachmentFiles are required",
-            });
+          logMessage("Numbers and attachmentFiles are required");
+          return res.status(400).json({
+            success: false,
+            message: "Numbers and attachmentFiles are required",
+          });
         }
 
         console.log("send message file");
@@ -161,7 +177,7 @@ app.post(
               groupName
             );
           } else {
-            var groupName = chatId + "not aktif";
+            var groupName = chatId + " not aktif";
           }
 
           nameUser.push(groupName);
@@ -169,12 +185,10 @@ app.post(
         }
       } else {
         if (!numbers || !message) {
-          return res
-            .status(400)
-            .json({
-              success: false,
-              message: "Numbers and message are required",
-            });
+          return res.status(400).json({
+            success: false,
+            message: "Numbers and message are required",
+          });
         }
         console.log("send message");
         for (const number of numberArray) {
@@ -192,20 +206,17 @@ app.post(
           // sleep(3);
         }
       }
-
-      res
-        .status(200)
-        .json({
-          status: true,
-          message: `messages successfully send to ${JSON.stringify(nameUser)}!`,
-        });
+      logMessage(`messages successfully send to ${JSON.stringify(nameUser)}!`);
+      res.status(200).json({
+        status: true,
+        message: `messages successfully send to ${JSON.stringify(nameUser)}!`,
+      });
     } catch (error) {
-      res
-        .status(500)
-        .json({
-          status: false,
-          message: "Failed to send messages: " + error.message,
-        });
+      logMessage(`Error sending message: ${error.message}`);
+      res.status(500).json({
+        status: false,
+        message: "Failed to send messages: " + error.message,
+      });
     }
   }
 );
@@ -215,6 +226,7 @@ app.post("/delete", authMiddleware, async (req, res) => {
   const { accountId } = req.body;
 
   if (!accountId) {
+    logMessage("Account ID is required");
     return res
       .status(400)
       .json({ success: false, message: "Account ID is required" });
@@ -224,12 +236,11 @@ app.post("/delete", authMiddleware, async (req, res) => {
     let destroy = await destroyAccount(clients, accountId);
     res.status(destroy.status == true ? 200 : 403).json(destroy);
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        status: false,
-        message: "Failed to send messages: " + error.message,
-      });
+    logMessage(`Error destroyed account: ${error.message}`);
+    res.status(500).json({
+      status: false,
+      message: "Failed to send messages: " + error.message,
+    });
   }
 });
 

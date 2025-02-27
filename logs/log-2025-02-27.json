@@ -1,354 +1,250 @@
 [
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:49:40 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:07:06 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:55:39 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:08:31 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:08:50 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:09:53 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:10:37 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:11:10 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:13:23 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:56:46 GMT+7",
-    "message": "Error destroyed account: TypeError [ERR_INVALID_ARG_TYPE]: The \"cb\" argument must be of type function. Received undefined"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 08:57:43 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 08:57:54 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:14:07 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:57:57 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 08:59:04 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:14:56 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:59:08 GMT+7",
-    "message": "Error destroyed account: TypeError [ERR_INVALID_ARG_TYPE]: The \"cb\" argument must be of type function. Received undefined"
+    "timestamp": "Thursday, February 27, 2025 at 21:16:24 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:59:37 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:16:43 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 08:59:43 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:00:12 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:23:23 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 09:01:35 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
+    "timestamp": "Thursday, February 27, 2025 at 21:23:34 GMT+7",
+    "message": "Loading 0% : WhatsApp"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 09:01:52 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:23:35 GMT+7",
+    "message": "Loading 99% : WhatsApp"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:24:39 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:28:11 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 09:01:55 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
+    "timestamp": "Thursday, February 27, 2025 at 21:28:25 GMT+7",
+    "message": "Loading 0% : WhatsApp"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 09:02:18 GMT+7",
-    "message": "Server is running on port 3001"
+    "timestamp": "Thursday, February 27, 2025 at 21:28:25 GMT+7",
+    "message": "Loading 99% : WhatsApp"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 09:02:26 GMT+7",
-    "message": "Error destroyed account: TypeError [ERR_INVALID_ARG_TYPE]: The \"cb\" argument must be of type function. Received undefined"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:02:35 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:02:38 GMT+7",
-    "message": "Error destroyed account: TypeError [ERR_INVALID_ARG_TYPE]: The \"cb\" argument must be of type function. Received undefined"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:02:50 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:02:54 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:08:12 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:08:55 GMT+7",
-    "message": "Error destroyed account: Error: EBUSY: resource busy or locked, unlink 'D:\\Web\\NodeJS\\whatsapp-web-api\\sessions_auth\\session-0812474179841\\Default\\chrome_debug.log'"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:10:00 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:10:06 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:11:41 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:13:40 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:18:51 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:25:55 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:31:11 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:33:09 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:38:58 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 09:42:08 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:04:52 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:05:28 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:07:16 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:08:17 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB050C70E95EF03F73CA8"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:09:25 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:09:56 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:10:12 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB0F317DD717CE23D3F67"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:10:13 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB07304FA0D4C3C297DE1"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:15:35 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:15:46 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB04702B1BE12ABA28D74"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:15:46 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB0FB80505DB37A2F9C6B"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:16:19 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB085B621E0DEE5D94A46"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:16:19 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB0A069E14AB64431C12D"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:17:35 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:06 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB08F53DB292688378CF7"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:06 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB0529C0A7CFCC51112BF"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:13 GMT+7",
-    "message": "Account 0812474179841 destroyed successfully"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:22 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB0AFC00E3517E086355D"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:22 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB08D724565F198D8D35C"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:26 GMT+7",
-    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB029BDA6C85CF640111E"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:19:26 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB097ABD89D060FDE5929"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:25:34 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:25:39 GMT+7",
-    "message": "Account 0812474179841 not found"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:26:35 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:26:38 GMT+7",
-    "message": "Account 0812474179841 not found"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:27:03 GMT+7",
-    "message": "Account 0812474179841 not found"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:28:18 GMT+7",
-    "message": "Server is running on port 3001"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:28:22 GMT+7",
-    "message": "Account 081247179841 not found"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 10:28:42 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:31:04 GMT+7",
     "message": "Account 081247179841 destroyed successfully"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 10:32:44 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB0C5D53BE8763CAF1228"
+    "timestamp": "Thursday, February 27, 2025 at 21:31:51 GMT+7",
+    "message": "Loading 100% : WhatsApp"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 10:32:54 GMT+7",
-    "message": "Report berhasil dikirim ke Katya Blinda Putri dengan ID pesan: true_6282385950512@c.us_3EB0960581AAA1DCB120DC"
+    "timestamp": "Thursday, February 27, 2025 at 21:32:12 GMT+7",
+    "message": "Error sending message: Evaluation failed: TypeError: Cannot read properties of undefined (reading 'WidFactory')\n    at pptr://__puppeteer_evaluation_script__:2:38"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 10:37:32 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:32:49 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 10:37:56 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:32:58 GMT+7",
+    "message": "Loading 100% : WhatsApp"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:32:59 GMT+7",
+    "message": "Client 081247179841 authenticated!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:32:59 GMT+7",
+    "message": "Client 081247179841 is ready!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:33:05 GMT+7",
+    "message": "Client 081247179841 authenticated!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:33:29 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB0B5538AF226687BB0CB"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:33:29 GMT+7",
+    "message": "messages successfully send to [\"Sani\"]!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:33:37 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB03FC992C6FF05144C4C"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:33:37 GMT+7",
+    "message": "messages successfully send to [\"Sani\",\"23453434534@c.us tidak aktif\"]!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:35:53 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB03DF9F43F91774B8F0A"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:35:53 GMT+7",
+    "message": "messages successfully send to [\"Sani\",\"23453434534@c.us not aktif\"]!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:37:13 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB08C86B01D4ED7A82D49"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:37:14 GMT+7",
+    "message": "messages successfully send to [\"Sani\",\"23453434534@c.us not aktif\"]!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:39:20 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 10:39:41 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:39:29 GMT+7",
+    "message": "Loading 100% : WhatsApp"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:39:30 GMT+7",
+    "message": "Client 081247179841 authenticated!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:39:30 GMT+7",
+    "message": "Client 081247179841 is ready!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:41:15 GMT+7",
     "message": "Server is running on port 3001"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 10:46:51 GMT+7",
-    "message": "Account 081247179841 destroyed successfully"
+    "timestamp": "Thursday, February 27, 2025 at 21:41:25 GMT+7",
+    "message": "Loading 100% : WhatsApp"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:39 GMT+7",
-    "message": "Server is running on port 3000"
+    "timestamp": "Thursday, February 27, 2025 at 21:41:26 GMT+7",
+    "message": "Client 081247179841 authenticated!"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:48 GMT+7",
-    "message": "Server is running on port 3000"
+    "timestamp": "Thursday, February 27, 2025 at 21:41:26 GMT+7",
+    "message": "Client 081247179841 is ready!"
   },
   {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:48 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:49 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:49 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:50 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:50 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:51 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:51 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:52 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:52 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:53 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:53 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:54 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:54 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:55 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:55 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:56 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:51:56 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:52:02 GMT+7",
-    "message": "Server is running on port 3000"
-  },
-  {
-    "timestamp": "Thursday, February 27, 2025 at 20:53:45 GMT+7",
+    "timestamp": "Thursday, February 27, 2025 at 21:43:03 GMT+7",
     "message": "Server is running on port 3001"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:43:12 GMT+7",
+    "message": "Loading 100% : WhatsApp"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:43:13 GMT+7",
+    "message": "Client 081247179841 authenticated!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:43:13 GMT+7",
+    "message": "Client 081247179841 is ready!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:43:18 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB0639540B1645B243D8D"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:43:18 GMT+7",
+    "message": "messages successfully send to [\"Sani\",\"23453434534@c.us not aktif\"]!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:02 GMT+7",
+    "message": "Server is running on port 3001"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:13 GMT+7",
+    "message": "Loading 100% : WhatsApp"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:14 GMT+7",
+    "message": "Client 081247179841 authenticated!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:14 GMT+7",
+    "message": "Client 081247179841 is ready!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:27 GMT+7",
+    "message": "File image type not supported, to user Sani please send image with type .jpg, .jpeg, .png"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:27 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB04077920AFC5BD87E04"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:44:27 GMT+7",
+    "message": "messages successfully send to [\"Sani\",\"23453434534@c.us not aktif\"]!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:35 GMT+7",
+    "message": "Server is running on port 3001"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:44 GMT+7",
+    "message": "Loading 100% : WhatsApp"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:45 GMT+7",
+    "message": "Client 081247179841 authenticated!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:45 GMT+7",
+    "message": "Client 081247179841 is ready!"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:49 GMT+7",
+    "message": "File image type not supported, to user Sani please send image with type .jpg, .jpeg, .png"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:50 GMT+7",
+    "message": "Report berhasil dikirim ke Sani dengan ID pesan: true_6282285202656@c.us_3EB0A2B46FB4B73C73A14B"
+  },
+  {
+    "timestamp": "Thursday, February 27, 2025 at 21:45:50 GMT+7",
+    "message": "messages successfully send to [\"Sani\",\"23453434534@c.us not aktif\"]!"
   }
 ]
