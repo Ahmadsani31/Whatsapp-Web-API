@@ -216,11 +216,6 @@ app.post("/delete", authMiddleware, async (req, res) => {
 //   });
 // }
 
-// function formatNumber(number) {
-//   return number.replace(/ /g, '').replace(/-/g, '').replace(/\(/g, '').replace(/\)/g, '') + '@c.us';
-// }
-
-
 app.listen(PORT, () => {
   logMessage(`Server is running on port ${PORT}`);
   console.log(`Server is running on port ${PORT}`);
