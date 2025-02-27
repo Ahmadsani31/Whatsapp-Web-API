@@ -99,7 +99,6 @@ app.post("/send-message/:accountId", authMiddleware, upload.single("attachment")
 
   // console.log(clients);
 
-
   const accountId = req.params.accountId;
 
   if (!accountId) {
@@ -196,8 +195,6 @@ app.post("/delete", authMiddleware, async (req, res) => {
   } catch (error) {
     res.status(500).json({ status: false, message: "Failed to send messages: " + error.message });
   }
-
-
 });
 
 
