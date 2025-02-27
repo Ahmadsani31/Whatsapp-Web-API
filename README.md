@@ -47,7 +47,7 @@ You can only access with `Authorization` - `BASIC_AUTH`, you can set username da
 | `message` | `string` | **Required/Opsional**. *if you send file or image (.jpg,.jpeg,.png) you can skip this, if not This is mandatory*|
 | `attachment` | `string` | **Opsional**. *Example:*`D:/example.jpg` |
 | `caption` | `string` | *Opsional*.  |
-| `Content-Type` | `application/json` | 
+| `Content-Type` | `form-data`  or `application/json` |
 
 
 #### Send File
