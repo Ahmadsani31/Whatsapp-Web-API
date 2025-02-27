@@ -7,7 +7,6 @@ const logMessage = (message) => {
     // fs.appendFileSync(path.join(__dirname, '../logs/status.log'), logMessage + '\n');
     // return logMessage;
 
-
     const logDir = path.join(__dirname, "../logs");
 
     // Dapatkan tanggal hari ini (format YYYY-MM-DD)
@@ -40,6 +39,7 @@ const logMessage = (message) => {
         fs.writeFileSync(logFile, JSON.stringify([logEntry], null, 2), "utf8");
         // console.log(`New log file created: ${logFile}`);
     }
+    return logEntry;
 }
 
 module.exports = logMessage;
