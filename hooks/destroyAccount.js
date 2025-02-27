@@ -24,8 +24,10 @@ const destroyAccount = async (clients, accountId) => {
             await rm(PATH_SESSIONS, { recursive: true, force: true }, (err) => {
                 if (err) {
                     console.error('Error deleting folder:', err);
+                    logMessage(`Error deleting folder: ${err}`);
                 } else {
                     console.log('Folder deleted successfully');
+                    logMessage(`Folder deleted successfully`);
                 }
             });
             logMessage(`Account ${accountId} destroyed successfully`);

@@ -8,18 +8,17 @@ async function sendMessageFile(client, caption, attachmentFiles, id, groupName) 
 
     const ext = path.extname(attachmentFiles.originalname).toLowerCase();
 
-    console.log(ext);
+    console.log('extension', ext);
 
     let mimetype = attachmentFiles.mimetype;
 
-    console.log(mimetype);
+    console.log('mimetype', mimetype);
+
     if (mimetype === "application/octet-stream") {
         if (ext === ".jpg" || ext === ".jpeg") {
             mimetype = "image/jpeg";
         } else if (ext === ".png") {
             mimetype = "image/png";
-        } else if (ext === ".gif") {
-            mimetype = "image/gif";
         }
     }
 
@@ -34,7 +33,7 @@ async function sendMessageFile(client, caption, attachmentFiles, id, groupName) 
             attachmentFiles.originalname);
 
         let sentMessage = await client.sendMessage(id, mediaFile, {
-            caption,
+            caption: caption,
         });
         console.log(sentMessage.id._serialized);
         logMessage(
