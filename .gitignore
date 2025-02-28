@@ -1,6 +1,7 @@
 node_modules/
 .wwebjs_auth/
 sessions_auth/
+contacts/
 logs/
 .env
 .wwebjs_cache/

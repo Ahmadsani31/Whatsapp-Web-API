@@ -6,25 +6,26 @@ const authMiddleware = require("./ultis/authMiddleware");
 const formatNumber = require("./ultis/formatNumber");
 const sendMessage = require("./hooks/sendMessage");
 const sendMessageFile = require("./hooks/sendMessageFile");
+const destroyAccount = require("./hooks/destroyAccount");
+const saveContacts = require("./ultis/saveContacts");
 
 const fs = require("fs");
 const path = require("path");
 const qrcode = require("qrcode-terminal");
 
 const multer = require("multer");
-const destroyAccount = require("./hooks/destroyAccount");
 const upload = multer({
   storage: multer.memoryStorage(),
 });
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
 
-const CREATE_DIR = ["sessions_auth", "logs"];
+const CREATE_DIR = ["sessions_auth", "logs", "contacts"];
 
 for (const dir of CREATE_DIR) {
   if (!fs.existsSync(path.join(__dirname, dir))) {
@@ -33,11 +34,10 @@ for (const dir of CREATE_DIR) {
 }
 
 const clients = new Map();
-
-app.post("/init-app", authMiddleware, (req, res) => {
+// GET INIT APP
+app.post("/init-app", authMiddleware, async (req, res) => {
 
   console.log("get/init-app");
-
 
   const { accountId } = req.body;
 
@@ -60,7 +60,37 @@ app.post("/init-app", authMiddleware, (req, res) => {
     }),
     puppeteer: {
       headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-accelerated-2d-canvas",
+        "--disable-background-timer-throttling",
+        "--disable-backgrounding-occluded-windows",
+        "--disable-breakpad",
+        "--disable-cache",
+        "--disable-component-extensions-with-background-pages",
+        "--disable-crash-reporter",
+        "--disable-dev-shm-usage",
+        "--disable-extensions",
+        "--disable-gpu",
+        "--disable-hang-monitor",
+        "--disable-ipc-flooding-protection",
+        "--disable-mojo-local-storage",
+        "--disable-notifications",
+        "--disable-popup-blocking",
+        "--disable-print-preview",
+        "--disable-prompt-on-repost",
+        "--disable-renderer-backgrounding",
+        "--disable-software-rasterizer",
+        "--ignore-certificate-errors",
+        "--log-level=3",
+        "--no-default-browser-check",
+        "--no-first-run",
+        "--no-zygote",
+        "--renderer-process-limit=100",
+        "--enable-gpu-rasterization",
+        "--enable-zero-copy",
+      ],
     },
     webVersionCache: {
       type: "remote",
@@ -84,8 +114,6 @@ app.post("/init-app", authMiddleware, (req, res) => {
   });
 
   client.on("authenticated", () => {
-    // saveSession(client, session);
-
     console.log(`Client ${accountId} AUTHENTICATED!`);
     logMessage(`Client ${accountId} authenticated!`);
 
@@ -96,23 +124,31 @@ app.post("/init-app", authMiddleware, (req, res) => {
     clients.delete(accountId);
   });
 
-  client.on("ready", () => {
+  client.on("ready", async () => {
     console.log(`Client ${accountId} is READY!`);
-    // console.log(clients);
     logMessage(`Client ${accountId} is ready!`);
+
+    try {
+      // Mengambil semua kontak
+      const contacts = await client.getContacts();
+      saveContacts(contacts, accountId);
+      console.log(`Kontak berhasil disimpan ke folder contacts`);
+    } catch (error) {
+      console.error('Gagal mengambil atau menyimpan kontak:', error);
+    }
 
   });
 
   client.initialize();
 
   clients.set(accountId, client);
-  // logSession(accountId, client);
 
   res
     .status(200)
     .json({ success: true, message: "Initializing new client..." });
 });
 
+// POST SEND MESSAGE
 app.post(
   "/send-message/:accountId",
   authMiddleware,
@@ -167,14 +203,15 @@ app.post(
             var groupName = chat.name;
 
             if (message) {
-              await sendMessage(client, message, chatId, groupName);
+              await sendMessage(client, message, chatId, groupName, res);
             }
             await sendMessageFile(
               client,
               caption,
               attachmentFiles,
               chatId,
-              groupName
+              groupName,
+              res
             );
           } else {
             var groupName = chatId + " not aktif";
@@ -197,7 +234,7 @@ app.post(
             let chat = await client.getChatById(chatId);
             var groupName = chat.name;
 
-            await sendMessage(client, message, chatId, groupName);
+            await sendMessage(client, message, chatId, groupName, res);
           } else {
             var groupName = chatId + " tidak aktif";
           }
@@ -221,7 +258,7 @@ app.post(
   }
 );
 
-// Destroy client
+// POST DESTROY CLIENT
 app.post("/delete", authMiddleware, async (req, res) => {
   const { accountId } = req.body;
 

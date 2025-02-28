@@ -1,6 +1,6 @@
 const logMessage = require("../ultis/logger");
 
-async function sendMessage(client, message, id, groupName) {
+async function sendMessage(client, message, id, groupName, res) {
     try {
 
         let sentMessage = await client.sendMessage(id, message);
@@ -12,6 +12,10 @@ async function sendMessage(client, message, id, groupName) {
         return groupName;
     } catch (error) {
         logMessage(`Error sending message: ${error}`);
+        return res.status(404).json({
+            status: false,
+            message: `Error sending message: ${error}`,
+        })
     }
 }
 

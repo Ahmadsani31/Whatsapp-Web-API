@@ -2,7 +2,7 @@ const { MessageMedia } = require("whatsapp-web.js");
 const logMessage = require("../ultis/logger");
 const path = require('path');
 
-async function sendMessageFile(client, caption, attachmentFiles, id, groupName) {
+async function sendMessageFile(client, caption, attachmentFiles, id, groupName, res) {
 
     const extension = [".jpg", ".jpeg", ".png"];
 
@@ -23,7 +23,12 @@ async function sendMessageFile(client, caption, attachmentFiles, id, groupName) 
     }
 
     if (!extension.includes(ext)) {
-        logMessage(`File image type not supported, to user ${groupName} please send image with type .jpg, .jpeg, .png`);
+        logMessage(`File image type not supported, to user please send image with type .jpg, .jpeg, .png`);
+
+        return res.status(403).json({
+            status: false,
+            message: `File image type not supported, to user please send image with type .jpg, .jpeg, .png!`,
+        })
     }
 
     try {
@@ -41,6 +46,10 @@ async function sendMessageFile(client, caption, attachmentFiles, id, groupName) 
         );
     } catch (error) {
         logMessage(`Error sending message: ${error}`);
+        return res.status(404).json({
+            status: false,
+            message: `Error sending message: ${error}`,
+        })
     }
 }
 
