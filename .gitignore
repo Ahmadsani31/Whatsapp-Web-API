@@ -1,7 +1,7 @@
 node_modules/
 .wwebjs_auth/
 sessions_auth/
-logs/status.log
+logs/
 .env
 .wwebjs_cache/
 
